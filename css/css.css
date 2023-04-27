@@ -1,0 +1,188 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+
+*{
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: red solid 1px; */
+}
+*::selection{
+    background: #fff877;
+    color: #d46600;
+}
+
+body{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-width: 500px;
+    max-width: 40vw;
+    padding: 10px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #0002;
+    padding: 10px;
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px 5px #aaa;
+    border-radius: 10px;
+    flex-grow: 0;
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 40vw;
+}
+
+div.datosFijos, div.datosDinamicos{
+    flex-grow: 1;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 50%;
+}
+.footerForm{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;  
+}
+div.datosFijos label{
+    border-left: solid 1px #fff5;
+    border-bottom: ridge 1px #ccc;
+    border-radius: 20px;
+    
+}
+
+div.datosDinamicos label{
+    border-left: solid 1px #fff5;
+    border-bottom: ridge 1px #ccc;
+    border-radius: 20px;
+}
+label{
+    width: 90%;
+    padding: 5px;
+    margin: 5px;
+    min-height: 10vh;
+    max-height: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+label p{
+    margin: 5px;
+}
+
+form input,select, #descargarMAC, #descargarPASS{
+    margin: 5px;
+    padding: 0 5px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #aaa;
+
+}
+form p{
+    width: 95%;
+    flex-grow: 2;
+}
+form input,select{
+    width: 95%;
+    flex-grow: 2;
+    border: solid 1px black;
+}
+form button{
+    width: 200px;
+    line-height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px 5px #aaa;
+
+}
+
+#visor{
+    width: 40vw;
+    margin: 0 auto;
+}
+
+#visor div{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+}
+#visor div p{
+    text-align: left;
+    width: 100%;
+    margin: 5px auto;
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.registro.titulo .campo{
+    border-bottom: #ff891a solid 1px;
+}
+.registro.titulo .campo p{
+    font-size: 18px;
+}
+.registro.titulo .campo p{
+    color: #c16000;
+}
+.registro .campo{
+    margin: 2px 5px;
+}
+
+#btnDescarga{
+display: flex;
+justify-content: center;
+align-content: center;
+margin: auto;
+flex-grow: 1;
+min-width: 500px;
+max-width: 30vw;
+margin-bottom: 30px;
+
+}
+
+a{
+background: #ff891a;
+color: #fff;
+text-decoration: none;
+text-align: center;
+flex-grow: 1;
+}
+
+#hh.hide{
+    display: none;
+}
+
+.alert{
+    box-shadow: 2px 2px 6px #f007,
+                1px 1px 5px #fff;
+}
+
+.lock{
+    border: solid 1px rgb(95, 255, 3);
+}
