@@ -2,6 +2,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 
+:root{
+    --selectColor:#b7ff00;
+    --selectBack:#000000;
+    --proLight:#00f2ff;
+    --proLightHov:#80f2ff;
+    --proKeys: #0098a5;
+    --proKeysHov:#006269;
+    --prokeyPress:#adff2f;
+    --colorODIN:#3273dc; 
+    --colorMERAKI:#67b346;
+    --colorCOMPILOT:#ad5bff;
+    --colorGDMS:#162543;
+    --colorACTEL:#0aa9d6;
+    --colorNOVA1: #2fb1db;
+    --colorNOVA2:#0f4769 ;
+    --colorNOVA3:#00bcd4 ;
+}
 
 *{
     color: #000;
@@ -10,14 +27,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* outline: red solid 1px; */
 }
 *::selection{
-    background: #fff877;
-    color: #d46600;
+    background: var(--selectBack);
+    color: var(--selectColor);
 }
 
-body{
+
+
+#body{
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -26,33 +44,188 @@ body{
     overflow-y: auto;
     flex-direction: column;
 }
+#bg{
+    position: fixed;
+    background: url("./../src/slide-02.jpg") fixed center center;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    opacity: 50%;
+    filter: saturate(.3);
+    z-index: -1;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 600px;
+    margin: 0 auto;    
+}
+
+nav *::selection{
+    background: transparent;
+    color: #888;
+}
+nav div.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    flex-grow: 1;
+    min-width: 600px;
+    padding: 5px;
+    margin: 10px auto 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px #fff inset,
+                0px 0px 0px #fff;
+
+}
+
+nav div.logo img{
+    width: 200px;
+}
+
+nav div.enlacesNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    min-height: 5vh;
+    min-width: 600px;
+    flex-grow: 5;
+}
+
+nav div.enlacesNav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 5vh;
+    text-align: center;
+    background: #eee;
+    transition: 1s;
+    border-bottom: solid 5px #ccc;
+
+}
+nav div.enlacesNav div:hover{
+    transition: .1s;
+    text-shadow: 1px 1px 1px #fff;
+}
+nav div.enlacesNav div:active{
+    transition: .1s;
+}
+
+nav div.enlacesNav div:nth-child(1){
+    border-radius: 10px 0 0 10px;
+}
+nav div.enlacesNav div:nth-child(1):hover{
+    border-bottom: solid 5px var(--colorACTEL) ;
+    color: var(--colorACTEL);
+}
+nav div.enlacesNav div:nth-child(1):active{
+    background: var(--colorACTEL);
+    color: #fff;
+}
+
+nav div.enlacesNav div:nth-child(2):hover{
+    border-bottom: solid 5px var(--colorCOMPILOT) ;
+    color: var(--colorCOMPILOT);
+}
+nav div.enlacesNav div:nth-child(2):active{
+    background: var(--colorCOMPILOT);
+    color: #fff;
+}
+nav div.enlacesNav div:nth-child(3):hover{
+    border-bottom: solid 5px var(--colorODIN) ;
+    color: var(--colorODIN);
+}
+nav div.enlacesNav div:nth-child(3):active{
+    background: var(--colorODIN);
+    color: #fff;
+}
+
+nav div.enlacesNav div:nth-child(4):hover{
+    border-bottom: solid 5px var(--colorGDMS);
+    color: var(--colorGDMS);
+    
+}
+nav div.enlacesNav div:nth-child(4):active{
+    background: var(--colorGDMS);
+    color: #fff;
+}
+nav div.enlacesNav div:nth-child(5){
+    border-radius: 0 10px 10px 0;
+}
+nav div.enlacesNav div:nth-child(5):hover{
+    border-bottom: solid 5px var(--colorMERAKI);
+    color: var(--colorMERAKI);
+    
+}
+nav div.enlacesNav div:nth-child(5):active{
+    background: var(--colorMERAKI);
+    color: #fff;
+}
 
 main{
     display: flex;
-    justify-content: center;
-    align-content: center;
-    min-width: 500px;
-    max-width: 40vw;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap !important;
+    min-width: 600px;
+    min-height: 80vh;
     padding: 10px;
     margin: 0 auto;
     flex-wrap: wrap;
-    /* flex-direction: column; */
+    scale: 1;
 }
+.init{
+    border: solid 1px red;
+}
+.initAnim{
+    border: solid 1px red;
+    animation: initAnim 2s forwards ease-in;
+}
+@keyframes initAnim {
+    0%{
+        border: solid 1px #f00;
+    }
+    5%{
+        border: solid 1px #f00;
+    }
+    10%{
+        border: solid 1px #080;
+    }
+    30%{
+        border: solid 1px #6f4;
+    }
+    100%{
+        border: solid 1px #000;
+    }
+}
+
 form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: #0002;
-    padding: 10px;
+    background: #eeed;
+    padding: 5px;
     border: solid 1px #aaa;
     box-shadow: 2px 2px 5px #aaa;
     border-radius: 10px;
     flex-grow: 0;
     margin: 0 auto;
-    min-width: 500px;
-    max-width: 40vw;
+    min-width: 600px;
+    max-width: 600px;
 }
+form *::selection{
+    color: #000;
+    background-color: #ddd;
+}
+
 
 div.datosFijos, div.datosDinamicos{
     flex-grow: 1;
@@ -84,13 +257,13 @@ label{
     width: 90%;
     padding: 5px;
     margin: 5px;
-    min-height: 10vh;
-    max-height: 10vh;
+    min-height: 8vh;
+    max-height: 8vh;
     display: flex;
     flex-direction: column;
 }
 label p{
-    margin: 5px;
+    margin: 1px;
 }
 
 form input,select, #descargarMAC, #descargarPASS{
@@ -123,8 +296,12 @@ form button{
 }
 
 #visor{
-    width: 40vw;
-    margin: 0 auto;
+    width: 600px;
+    margin: 0 auto 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
 }
 
 #visor div{
@@ -151,18 +328,22 @@ form button{
     color: #c16000;
 }
 .registro .campo{
-    margin: 2px 5px;
+    margin: 0px 5px;
+    line-height: 20px;
 }
+.registro .campo.campoPass p{
+    text-align: center !important;
+} 
 
 #btnDescarga{
 display: flex;
 justify-content: center;
 align-content: center;
-margin: auto;
+margin: 10px auto 0;
 flex-grow: 1;
 min-width: 500px;
 max-width: 30vw;
-margin-bottom: 30px;
+margin-bottom: 10px;
 
 }
 
@@ -174,7 +355,13 @@ text-align: center;
 flex-grow: 1;
 }
 
+
 #hh.hide{
+    display: none;
+    transition: 1s;
+}
+
+.hide{
     display: none;
 }
 
@@ -184,5 +371,167 @@ flex-grow: 1;
 }
 
 .lock{
-    border: solid 1px rgb(95, 255, 3);
+    border: solid 2px #f38906;
+}
+
+/* modo pro */
+
+.generado p{
+    background: var(--colorNOVA2);
+    border-radius: 3px;
+    color: #fff;
+    text-align: center !important;
+    cursor: pointer;
+    transition: .7s;
+}
+.generado p:hover{
+    background: var(--colorNOVA3);
+    transition: .1s;
+}
+.generado p:active{
+    background: var(--proLightHov);
+    transition: .1s;
+}
+
+#body.userPro {
+    background: #222;
+    transition:1s;
+}
+
+#body.userPro nav div.logo{
+    border-radius: 10px;
+    background: #fff3;
+    box-shadow: 0px 0px 50px #fff inset,
+                0px 0px 100px #fff;
+}
+
+#body.userPro a{
+    background: var(--colorNOVA3);
+    color: #000;
+    transition: .7s;
+}
+
+#body.userPro a:hover{
+    transition: .1s;
+    background: var(--proLightHov);
+}
+
+#body.userPro  .registro.titulo .campo{
+    border-bottom:solid 2px var(--proLight);
+}
+#body.userPro  .registro.titulo .campo p{
+    color: var(--proKeys);
+}
+
+#body.userPro .lock{
+    border: solid 2px var(--proLight);
+}
+
+#body.userPro form button{
+    color: #fff;
+    background: var(--colorNOVA2);
+    border: #fff solid 1px;
+    transition: .7s;
+    cursor: pointer;
+}
+
+#body.userPro form button:hover{
+    background: var(--colorNOVA1);
+    transition: .1s;
+
+}
+#advUser{
+    position: sticky;
+    bottom: 20px;
+    min-width: 150px;
+    max-width: 150px;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 2px #00e5ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #00e5ff ;
+    opacity: .4;
+    transition: .5s;
+}
+#advUser:hover{
+    opacity: 1;
+    transition: .5s;
+    cursor: pointer;
+}
+#advUser span::before{
+    content: "¿Usuario Pro?";
+    min-width: 50%;
+    max-width: 50%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+}
+
+#body.userPro #advUser{
+    min-width: 100%;
+    max-width: 100%;
+    height: 100px;
+    border: dashed 2px #00e5ff;
+    background: #000a;
+    opacity: 1;
+}
+#body.userPro #advUser{
+    cursor: default;
+
+}
+
+#advUser span{
+width: 100%;
+text-align: center;
+}
+
+#advUser button{
+    width: 20%;
+    min-width: 180px;
+    max-width: 180px;
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 5px;
+    color: #000;
+    font-weight: bold;
+    background: var(--proLight);
+    border: solid 1px #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+#advUser button:hover{
+    background: var(--proLightHov);
+    transition: .1s;
+
+}
+
+#body.userPro #advUser span::before{
+    content: "< proActivado />";
+    font-weight: bolder;
+    animation: fire 2s linear infinite alternate-reverse;
+}
+
+@keyframes fire {
+    0%{
+        color: #00ffff;
+    }
+    10%{
+        color: #007dc5;
+    }
+    26%{
+        color: #57fcff;
+    }
+    79%{
+        color: #00d67d;
+    }
+    100%{
+        color: #00ffff;
+    }
 }

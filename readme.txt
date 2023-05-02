@@ -1,1 +1,1 @@
-Hola copia de repo y archivos anterioes, se dejan locales pero estos son para presentar en negocios para venderlo
+Hola copia de repo y archivos anteriores. Se dejan local para desarrollo. Estos nuevos archivos son para presentaciones a empresas y posterior venta de servicio.
