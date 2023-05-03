@@ -12,7 +12,7 @@
     --prokeyPress:#adff2f;
     --colorODIN:#3273dc; 
     --colorMERAKI:#67b346;
-    --colorCOMPILOT:#ad5bff;
+    --colorCOMMPILOT:#ad5bff;
     --colorGDMS:#162543;
     --colorACTEL:#0aa9d6;
     --colorNOVA1: #2fb1db;
@@ -130,11 +130,11 @@ nav div.enlacesNav div:nth-child(1):active{
 }
 
 nav div.enlacesNav div:nth-child(2):hover{
-    border-bottom: solid 5px var(--colorCOMPILOT) ;
-    color: var(--colorCOMPILOT);
+    border-bottom: solid 5px var(--colorCOMMPILOT) ;
+    color: var(--colorCOMMPILOT);
 }
 nav div.enlacesNav div:nth-child(2):active{
-    background: var(--colorCOMPILOT);
+    background: var(--colorCOMMPILOT);
     color: #fff;
 }
 nav div.enlacesNav div:nth-child(3):hover{
@@ -285,14 +285,18 @@ form input,select{
     flex-grow: 2;
     border: solid 1px black;
 }
-form button{
-    width: 200px;
+form .footerForm button{
+    flex-grow: 1;
     line-height: 30px;
-    margin: 10px;
+    margin: 10px 25px;
     border-radius: 10px;
     border: solid 1px #aaa;
     box-shadow: 2px 2px 5px #aaa;
-
+    transition: 1s;
+}
+form .footerForm button:hover{
+    background: #fff;
+    transition: .1s;
 }
 
 #visor{
@@ -445,24 +449,39 @@ flex-grow: 1;
     bottom: 20px;
     min-width: 150px;
     max-width: 150px;
+    min-height: 20vh;
     margin: 0 auto;
-    height: 30px;
     border-radius: 20px;
     border: solid 2px #00e5ff00;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background: #00e5ff ;
-    opacity: .4;
-    transition: .5s;
+    transition: 1s;
+
 }
-#advUser:hover{
-    opacity: 1;
-    transition: .5s;
-    cursor: pointer;
+
+#advUser button#nuevo{
+    flex-grow: 1;
+    line-height: 30px;
+    border-radius: 10px;
+    border: solid 1px #aaa;
+    box-shadow: 2px 2px 5px #aaa;
+    background: #eee;
+}
+#advUser button#nuevo:hover{
+    background: #fff;
+    color: #f00;
+}
+
+#advUser span{
+    opacity: .4;
+    width: 100%;
+    text-align: center;
+    transition: 1s;
 }
 #advUser span::before{
+    background: #00e5ff;
     content: "¿Usuario Pro?";
     min-width: 50%;
     max-width: 50%;
@@ -471,23 +490,22 @@ flex-grow: 1;
     border-radius: 10px;
     color: #000;
 }
-
+#advUser span:hover{
+    opacity: 1;
+    transition: .5s;
+    cursor: pointer;
+}
 #body.userPro #advUser{
-    min-width: 100%;
-    max-width: 100%;
-    height: 100px;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 20vh;
     border: dashed 2px #00e5ff;
     background: #000a;
-    opacity: 1;
+    padding: 20px;
+
 }
 #body.userPro #advUser{
     cursor: default;
-
-}
-
-#advUser span{
-width: 100%;
-text-align: center;
 }
 
 #advUser button{
@@ -511,27 +529,16 @@ text-align: center;
     transition: .1s;
 
 }
+#body.userPro #advUser span{
+    opacity: 1;
+}
+#body.userPro #advUser span:hover{
+    cursor: default;
+}
 
 #body.userPro #advUser span::before{
     content: "< proActivado />";
     font-weight: bolder;
-    animation: fire 2s linear infinite alternate-reverse;
-}
-
-@keyframes fire {
-    0%{
-        color: #00ffff;
-    }
-    10%{
-        color: #007dc5;
-    }
-    26%{
-        color: #57fcff;
-    }
-    79%{
-        color: #00d67d;
-    }
-    100%{
-        color: #00ffff;
-    }
+    background: transparent;
+    color: var(--colorNOVA3);
 }
