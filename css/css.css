@@ -18,8 +18,12 @@
     --colorNOVA1: #2fb1db;
     --colorNOVA2:#0f4769 ;
     --colorNOVA3:#00bcd4 ;
+    --colorDestacadoNormal: #e77400;
+    --colorDestacadoRemarcado : #ff891a;
+    --colorTNormal: linear-gradient(135deg,#4486ff,#3661ff);
+    --colorTPro: linear-gradient(45deg,#00508d,#00a6c3);
 }
-
+    
 *{
     color: #000;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -100,7 +104,7 @@ nav div.enlacesNav{
     flex-grow: 5;
 }
 
-nav div.enlacesNav div{
+nav div.enlacesNav a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,65 +112,67 @@ nav div.enlacesNav div{
     height: 5vh;
     text-align: center;
     background: #eee;
+    color: #000;
     transition: 1s;
     border-bottom: solid 5px #ccc;
+    text-decoration: none;
 
 }
-nav div.enlacesNav div:hover{
+nav div.enlacesNav a:hover{
     transition: .1s;
     text-shadow: 1px 1px 1px #fff;
 }
-nav div.enlacesNav div:active{
+nav div.enlacesNav a:active{
     transition: .1s;
 }
 
-nav div.enlacesNav div:nth-child(1){
+nav div.enlacesNav a:nth-child(1){
     border-radius: 10px 0 0 10px;
 }
-nav div.enlacesNav div:nth-child(1):hover{
+nav div.enlacesNav a:nth-child(1):hover{
     border-bottom: solid 5px var(--colorACTEL) ;
     color: var(--colorACTEL);
 }
-nav div.enlacesNav div:nth-child(1):active{
+nav div.enlacesNav a:nth-child(1):active{
     background: var(--colorACTEL);
     color: #fff;
 }
 
-nav div.enlacesNav div:nth-child(2):hover{
+nav div.enlacesNav a:nth-child(2):hover{
     border-bottom: solid 5px var(--colorCOMMPILOT) ;
     color: var(--colorCOMMPILOT);
 }
-nav div.enlacesNav div:nth-child(2):active{
+nav div.enlacesNav a:nth-child(2):active{
     background: var(--colorCOMMPILOT);
     color: #fff;
 }
-nav div.enlacesNav div:nth-child(3):hover{
+nav div.enlacesNav a:nth-child(3):hover{
     border-bottom: solid 5px var(--colorODIN) ;
     color: var(--colorODIN);
 }
-nav div.enlacesNav div:nth-child(3):active{
+nav div.enlacesNav a:nth-child(3):active{
     background: var(--colorODIN);
     color: #fff;
 }
 
-nav div.enlacesNav div:nth-child(4):hover{
+nav div.enlacesNav a:nth-child(4):hover{
     border-bottom: solid 5px var(--colorGDMS);
     color: var(--colorGDMS);
     
 }
-nav div.enlacesNav div:nth-child(4):active{
+nav div.enlacesNav a:nth-child(4):active{
     background: var(--colorGDMS);
     color: #fff;
 }
-nav div.enlacesNav div:nth-child(5){
+nav div.enlacesNav a:nth-child(5){
     border-radius: 0 10px 10px 0;
 }
-nav div.enlacesNav div:nth-child(5):hover{
+nav div.enlacesNav a:nth-child(5):hover{
     border-bottom: solid 5px var(--colorMERAKI);
     color: var(--colorMERAKI);
     
 }
-nav div.enlacesNav div:nth-child(5):active{
+nav div.enlacesNav a:nth-child(5):active{
     background: var(--colorMERAKI);
     color: #fff;
 }
@@ -289,16 +295,20 @@ form input,select{
     border: solid 1px black;
 }
 form .footerForm button{
+    max-width: 490px;
     flex-grow: 1;
     line-height: 30px;
     margin: 10px 25px;
-    border-radius: 10px;
+    border-radius: 5px;
+    background: var(--colorDestacadoNormal);
+    color: #fff;
     border: solid 1px #aaa;
+    box-shadow: 2px 2px 5px var(--colorNOVA2);
     box-shadow: 2px 2px 5px #aaa;
     transition: 1s;
 }
 form .footerForm button:hover{
-    background: #fff;
+    background: var(--colorDestacadoRemarcado);
     transition: .1s;
 }
 
@@ -326,13 +336,13 @@ form .footerForm button:hover{
 }
 
 .registro.titulo .campo{
-    border-bottom: #ff891a solid 1px;
+    border-bottom: var(--colorDestacadoNormal) solid 1px;
 }
 .registro.titulo .campo p{
     font-size: 18px;
 }
 .registro.titulo .campo p{
-    color: #c16000;
+    color: var(--colorDestacadoNormal);
 }
 .registro .campo{
     margin: 0px 5px;
@@ -354,12 +364,17 @@ margin-bottom: 10px;
 
 }
 
-a{
-background: #ff891a;
+#btnDescarga a{
+background: var(--colorDestacadoNormal);
 color: #fff;
 text-decoration: none;
 text-align: center;
 flex-grow: 1;
+}
+
+#btnDescarga a:hover{
+    background: var(--colorDestacadoRemarcado);
+
 }
 
 
@@ -412,18 +427,18 @@ flex-grow: 1;
                 0px 0px 100px #fff;
 }
 
-#body.userPro a{
+#body.userPro #btnDescarga a{
     background: var(--colorNOVA3);
     color: #000;
     transition: .7s;
 }
 
-#body.userPro a:hover{
+#body.userPro #btnDescarga a:hover{
     transition: .1s;
     background: var(--proLightHov);
 }
 
-#body.userPro  .registro.titulo .campo{
+#body.userPro .registro.titulo .campo{
     border-bottom:solid 2px var(--proLight);
 }
 #body.userPro  .registro.titulo .campo p{
@@ -450,8 +465,8 @@ flex-grow: 1;
 #advUser{
     position: sticky;
     bottom: 20px;
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 200px;
+    max-width: 200px;
     min-height: 20vh;
     margin: 0 auto;
     border-radius: 20px;
@@ -466,7 +481,9 @@ flex-grow: 1;
 
 #advUser button#nuevo{
     flex-grow: 1;
-    line-height: 30px;
+    line-height: 20px;
+    min-width: 500px;
+    max-width: 500px;
     border-radius: 10px;
     border: solid 1px #aaa;
     box-shadow: 2px 2px 5px #aaa;
@@ -475,35 +492,44 @@ flex-grow: 1;
 #advUser button#nuevo:hover{
     background: #fff;
     color: #f00;
-}
-
-#advUser span{
-    opacity: .4;
-    width: 100%;
-    text-align: center;
-    transition: 1s;
-}
-#advUser span::before{
-    background: #00e5ff;
-    content: "¿Usuario Pro?";
-    min-width: 50%;
-    max-width: 50%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    color: #000;
-}
-#advUser span:hover{
-    opacity: 1;
-    transition: .5s;
     cursor: pointer;
 }
+
+#advUser span {
+    text-align: center;
+    width: 100%;
+}
+
+#advUser span::before{
+    display: block;
+    background: var(--colorNOVA1);
+    content: "¿Usuario Pro?";
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #000;
+    opacity: .7;
+    transition: 1s;
+    text-align: center;
+
+}
+#advUser span:hover::before{
+    display: block;
+    background: var(--colorNOVA2);
+    content: "¿Seguro?";
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 1;
+    transition: .5s;
+    text-align: center;
+}
+
 #body.userPro #advUser{
+    background: #000a;
     min-width: 600px;
     max-width: 600px;
     min-height: 20vh;
     border: dashed 2px #00e5ff;
-    background: #000a;
     padding: 20px;
 
 }
@@ -523,14 +549,13 @@ flex-grow: 1;
     background: var(--proLight);
     border: solid 1px #fff;
     border-radius: 10px;
-    cursor: pointer;
     transition: .7s;
 }
 
 #advUser button:hover{
     background: var(--proLightHov);
     transition: .1s;
-
+    cursor: pointer;
 }
 #body.userPro #advUser span{
     opacity: 1;
@@ -540,8 +565,11 @@ flex-grow: 1;
 }
 
 #body.userPro #advUser span::before{
-    content: "< proActivado />";
-    font-weight: bolder;
+    content: '< Wild[Card] />';
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: lighter;
     background: transparent;
     color: var(--colorNOVA3);
+    color: transparent;
+    color: #aaa;
 }

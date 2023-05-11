@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En mantenimiento</title>
-    <link rel="stylesheet" href="css/css.css">
-    <style>
-        body{
-            background: #222;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 90vh;
-        }
-        div{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            padding:10px;
-        }
-        .info{
-            max-width: 1000px;
-            min-width: 415px;
-            color: #fff;
-            text-align: justify;
-            font-family: 'Anonymous Pro';
-            font-weight: lighter;    
-            font-size: 30px;    }
-    </style>
+    <title>Wild[Card]</title>
+    <link rel="icon" href="https://www.novatelecom.cl/wp-content/uploads/2019/01/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/css.css">
+    <script type="module" src="./js/xTrgo.m.js"></script>
 </head>
-<body>
-    <div>
-        <h1 class="info">Este aplicativo está en mantenimiento para mejorar la calidad de la autenticación en los equipos a provisionar :)</h1>
+
+<body id="body">
+<span id="bg"></span>
+<nav>
+    <div class="itemNav logo">
+        <img src="./src/logo-removebg-preview.png" alt="">
     </div>
+    <div class="itemNav enlacesNav">
+        <a id="enlace1" class="itemNav">Actel</a>
+        <a id="enlace2" class="itemNav">Commpilot</a>
+        <a id="enlace3" class="itemNav">ODiN</a>
+        <a id="enlace4" class="itemNav">GDMS</a>
+        <a id="enlace5" class="itemNav">Meraki</a>
+    </div>
+</nav>
+    <main>
+
+        <form action="" id="tablaForm" class="init">
+            <div class="datosFijos">
+
+                <label for="OTT">
+                    <p>Sigla - OTT</p>
+                    <input value="" type="text" id="OTT" maxlength="20">
+                </label>
+
+                <label for="CS">
+                    <p>CS</p>
+                    <input value="" type="text" id="CS" maxlength="11">
+                </label>
+
+                <label for="grupoCliente">
+                    <p>Grupo Cliente</p>
+                    <input value="" type="text" id="grupoCliente">
+                </label>
+            </div>
+
+            <div class="datosDinamicos">
+
+                <label for="tipo">
+                    <p>Equipo</p>
+                    <select id="tipo">
+                        <option value="Grandstream-GRP-26xx">Grandstream-GRP-26xx</option>
+                        <option value="Cisco-MPP-Entel">Cisco-MPP-Entel</option>
+                    </select>
+                </label>
+
+                <label for="ani">
+                    <p>ANI</p>
+                    <input value="" type="text" id="ani" maxlength="9">
+                </label>
+
+                <label for="mac">
+                    <p>MAC</p>
+                    <input value="" type="text" id="mac" maxlength="12">
+                </label>
+
+            </div>
+            <div class="footerForm">
+                <button type="submit" id="agregar">Agregar</button>
+            </div>
+
+        </form>
+
+        <section id="hh" class="hide">
+            <div id="btnDescarga">
+                <a href="#" id="descargarMAC">Descargar CSV MAC</a>
+                <a href="#" id="descargarPASS">Descargar CSV PASS</a>
+            </div>
+            <div id="visor">
+
+            </div>
+            <div id="advUser">
+                <button type="submit" id="nuevo">Borrar todo</button> 
+                <span id="cond"></span>
+                <button id="comandos" class="hide">Generar comandos</button>
+                <button id="enlace" class="hide">Ir a cambiar claves</button>
+            </div>
+        </section>
+
+    </main>
+
+
     
-    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
+
 </html>
