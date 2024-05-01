@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En mantenimiento</title>
-    <link rel="stylesheet" href="css/css.css">
+    <title>WildCard GEN</title>
+    <link rel="stylesheet" href="css/csswild.css">
     <style>
         body{
             background: #222;
@@ -65,13 +65,25 @@
             font-weight: lighter;
 
         }
+        #logoW{
+            height: 200px;
+            /* filter:brightness(59%); */
+            animation: hhue infinite 15s ease-in-out
+            
+        }
+
+        @keyframes hhue {
+            0%{ filter: hue-rotate(0deg), brightness(5%);}
+            50%{ filter: hue-rotate(360deg)brightness(290%);}
+            100%{ filter: hue-rotate(0deg), brightness(5%);}
+            
+        }
+
     </style>
 </head>
 <body>
     <div>
-        <h1 class="info">
-            Este aplicativo está a la espera de ser activado :D
-        </h1>
+       <img id="logoW" src="src/WildCard.png" alt="">
     </div>
     
     <section>
