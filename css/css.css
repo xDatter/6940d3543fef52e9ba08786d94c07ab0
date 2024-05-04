@@ -15,9 +15,9 @@
     --colorCOMMPILOT:#ad5bff;
     --colorGDMS:#162543;
     --colorACTEL:#0aa9d6;
-    --colorNOVA1: #2fb1db;
-    --colorNOVA2:#0f4769 ;
-    --colorNOVA3:#00bcd4 ;
+    --colorCorp1: #2fb1db;
+    --colorCorp2:#0f4769 ;
+    --colorCorp3:#00bcd4 ;
     --colorDestacadoNormal: #e77400;
     --colorDestacadoRemarcado : #ff891a;
     --colorTNormal: linear-gradient(135deg,#4486ff,#3661ff);
@@ -303,7 +303,7 @@ form .footerForm button{
     background: var(--colorDestacadoNormal);
     color: #fff;
     border: solid 1px #aaa;
-    box-shadow: 2px 2px 5px var(--colorNOVA2);
+    box-shadow: 2px 2px 5px var(--colorCorp2);
     box-shadow: 2px 2px 5px #aaa;
     transition: 1s;
 }
@@ -399,7 +399,7 @@ flex-grow: 1;
 /* modo pro */
 
 .generado p{
-    background: var(--colorNOVA2);
+    background: var(--colorCorp2);
     border-radius: 3px;
     color: #fff;
     text-align: center !important;
@@ -407,10 +407,20 @@ flex-grow: 1;
     transition: .7s;
 }
 .generado p:hover{
-    background: var(--colorNOVA3);
+    background: var(--colorCorp3);
     transition: .1s;
 }
 .generado p:active{
+    background: var(--proLightHov);
+    transition: .1s;
+}
+
+.generado.hue p{
+    background: var(--colorMERAKI);
+    transition: .1s;
+}
+
+.generado.hue p:active{
     background: var(--proLightHov);
     transition: .1s;
 }
@@ -428,7 +438,7 @@ flex-grow: 1;
 }
 
 #body.userPro #btnDescarga a{
-    background: var(--colorNOVA3);
+    background: var(--colorCorp3);
     color: #000;
     transition: .7s;
 }
@@ -451,14 +461,14 @@ flex-grow: 1;
 
 #body.userPro form button{
     color: #fff;
-    background: var(--colorNOVA2);
+    background: var(--colorCorp2);
     border: #fff solid 1px;
     transition: .7s;
     cursor: pointer;
 }
 
 #body.userPro form button:hover{
-    background: var(--colorNOVA1);
+    background: var(--colorCorp1);
     transition: .1s;
 
 }
@@ -502,7 +512,7 @@ flex-grow: 1;
 
 #advUser span::before{
     display: block;
-    background: var(--colorNOVA1);
+    background: var(--colorCorp1);
     content: "¿Usuario Pro?";
     padding: 10px 20px;
     border-radius: 10px;
@@ -514,7 +524,7 @@ flex-grow: 1;
 }
 #advUser span:hover::before{
     display: block;
-    background: var(--colorNOVA2);
+    background: var(--colorCorp2);
     content: "¿Seguro?";
     padding: 10px 20px;
     border-radius: 10px;
@@ -569,7 +579,7 @@ flex-grow: 1;
     font-family: 'Anonymous Pro', monospace;
     font-weight: lighter;
     background: transparent;
-    color: var(--colorNOVA3);
+    color: var(--colorCorp3);
     color: transparent;
     color: #aaa;
 }
